@@ -24,13 +24,13 @@ class Fibonacci
 end
 
 fib = Fibonacci.new
-# puts fib.iterative_fib(5)
-# puts fib.recursive_fib(7)
 
 # 1, 1, 2, 3, 5, 8, 13, 21, 34
 
 require 'benchmark'
+
 num = 35
+
 Benchmark.bm do |x|
   x.report('recursive_fib') { fib.recursive_fib(num) }
   x.report('iterative_fib') { fib.iterative_fib(num) }

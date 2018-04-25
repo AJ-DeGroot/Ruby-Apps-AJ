@@ -9,14 +9,11 @@ module Luhn
 				check_subtract_nine = cc_array.pop.to_i * 2
 				if check_subtract_nine.to_i >= 10
 					doubled_array.unshift(check_subtract_nine - 9)
-					# print "#{@doubled_array.first}"
 				else
 					doubled_array.unshift(check_subtract_nine)
-					# print "#{@doubled_array.first}"
 				end
 			else
 				doubled_array.unshift(cc_array.pop)
-				# print "#{@doubled_array.first}"
 			end	
 
 		end
